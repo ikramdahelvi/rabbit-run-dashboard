@@ -4,6 +4,12 @@ Responsive enterprise dashboard UI built with React, Tailwind CSS, Material UI, 
 
 ---
 
+## Live Demo
+
+https://rabbit-run-dashboard.vercel.app
+
+---
+
 ## Tech Stack
 
 - React.js
