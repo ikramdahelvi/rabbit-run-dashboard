@@ -50,82 +50,48 @@ const tableData = [
 const DataTable = () => {
   return (
     <div className="overflow-x-auto border-t border-[#E5E7EB]">
-      
-      <table className="w-full border-collapse whitespace-nowrap lg:whitespace-normal">
-        
+      <table className="min-w-[600px] w-full border-collapse whitespace-nowrap lg:whitespace-normal">
         {/* HEADER */}
         <thead>
-          
           <tr className="h-[48px] border-b border-[#D1D5DB] bg-[#F7F7F8] text-[#4B5563]">
-            
-            <th className="text-left font-medium pl-4">
+            <th className="text-left font-medium pl-4 whitespace-nowrap">
               Rabbit Header One
             </th>
 
-            <th className="text-center">
-              Header Two
-            </th>
+            <th className="text-center whitespace-nowrap">Header Two</th>
 
-            <th className="text-center">
-              H Three
-            </th>
+            <th className="text-center whitespace-nowrap">H Three</th>
 
-            <th className="text-center">
-              H Four
-            </th>
+            <th className="text-cente whitespace-nowrapr">H Four</th>
 
-            <th className="text-center">
-              H Five
-            </th>
+            <th className="text-center whitespace-nowrap">H Five</th>
 
-            <th className="text-right pr-4">
-              H Value
-            </th>
-
+            <th className="text-right pr-4 whitespace-nowrap">H Value</th>
           </tr>
-
         </thead>
 
         {/* BODY */}
         <tbody className="text-[#3F3F46]">
-          
           {tableData.map((item, index) => (
             <tr
               key={index}
               className="h-[44px] border-b border-[#E5E7EB] hover:bg-[#F8FAFC] transition"
             >
-              
-              <td className=" font-medium pl-4">
-                {item.rabbit}
-              </td>
+              <td className=" font-medium pl-4">{item.rabbit}</td>
 
-              <td className="text-center">
-                {item.two}
-              </td>
+              <td className="text-center">{item.two}</td>
 
-              <td className="text-center">
-                {item.three}
-              </td>
+              <td className="text-center">{item.three}</td>
 
-              <td className="text-center">
-                {item.four}
-              </td>
+              <td className="text-center">{item.four}</td>
 
-              <td className="text-center">
-                {item.five}
-              </td>
+              <td className="text-center">{item.five}</td>
 
-              <td className="text-right pr-4 font-medium">
-                {item.value}
-              </td>
-
+              <td className="text-right pr-4 font-medium">{item.value}</td>
             </tr>
           ))}
-
         </tbody>
-
       </table>
-
     </div>
   );
 };

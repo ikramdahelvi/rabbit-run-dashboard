@@ -93,7 +93,7 @@ const CalendarCard = () => {
         <div className="absolute top-14 left-0 z-50 bg-white rounded-md shadow-md overflow-hidden">
           {/* HEADER */}
           <div className="px-5 pt-5">
-            <p className="text-[15px] font-semibold tracking-wide uppercase text-[#285B6C] mb-2 " >
+            <p className="text-[15px] font-semibold tracking-wide uppercase text-[#285B6C] mb-2 ">
               Select Date
             </p>
 
@@ -119,7 +119,7 @@ const CalendarCard = () => {
                   md: "400px",
                 },
                 backgroundColor: "#FFFFFF",
-                
+
                 "&.MuiDateCalendar-root": {
                   maxHeight: "303px !important",
                   height: "303px !important",
@@ -188,7 +188,6 @@ const CalendarCard = () => {
                 "& .MuiPickersDay-root:hover": {
                   backgroundColor: "#E5E7EB",
                 },
-                
               }}
             />
           </LocalizationProvider>

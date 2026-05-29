@@ -2,18 +2,12 @@ import { useState } from "react";
 
 import Checkbox from "@mui/material/Checkbox";
 
-import {
-  CircleChevronDown,
-  CircleChevronUp ,
-} from "lucide-react";
+import { CircleChevronDown, CircleChevronUp } from "lucide-react";
 
 const rabbitGroups = [
   {
     group: "Rabbit USA",
-    items: [
-      "Rabbit Run USA One",
-      "Rabbit Run USA Two",
-    ],
+    items: ["Rabbit Run USA One", "Rabbit Run USA Two"],
   },
 
   {
@@ -27,44 +21,28 @@ const rabbitGroups = [
 
   {
     group: "Others",
-    items: [
-      "CM DPG",
-      "Nikko America",
-      "Manubank",
-      "Leasing Finance",
-    ],
+    items: ["CM DPG", "Nikko America", "Manubank", "Leasing Finance"],
   },
 ];
 
 const RabbitFilter = () => {
-  const allItems = rabbitGroups.flatMap(
-    (group) => group.items
-  );
+  const allItems = rabbitGroups.flatMap((group) => group.items);
 
   const [open, setOpen] = useState(false);
 
-  const [selectedItems, setSelectedItems] =
-    useState([]);
+  const [selectedItems, setSelectedItems] = useState([]);
 
   /* CHECK SINGLE */
   const handleCheck = (item) => {
     if (selectedItems.includes(item)) {
-      setSelectedItems(
-        selectedItems.filter(
-          (selected) => selected !== item
-        )
-      );
+      setSelectedItems(selectedItems.filter((selected) => selected !== item));
     } else {
-      setSelectedItems([
-        ...selectedItems,
-        item,
-      ]);
+      setSelectedItems([...selectedItems, item]);
     }
   };
 
   /* ALL CHECKED */
-  const allSelected =
-    selectedItems.length === allItems.length;
+  const allSelected = selectedItems.length === allItems.length;
 
   /* HANDLE ALL */
   const handleAll = () => {
@@ -77,7 +55,6 @@ const RabbitFilter = () => {
 
   return (
     <div className="relative">
-      
       {/* BUTTON */}
       <button
         onClick={() => setOpen(!open)}
@@ -85,7 +62,8 @@ const RabbitFilter = () => {
           h-[50px]
           lg:min-w-[190px]
           w-full
-          px-6
+          lg:px-6
+          px-4
           rounded-full
           border
           border-[#44526A]
@@ -99,10 +77,8 @@ const RabbitFilter = () => {
           cursor-pointer
         "
       >
-        
         {/* LEFT CONTENT */}
-        <div className="flex flex-col items-start justify-center leading-none">
-          
+        <div className="flex flex-col items-start justify-center leading-none pr-4">
           {/* FLOAT LABEL */}
           <span
             className={`
@@ -137,11 +113,8 @@ const RabbitFilter = () => {
               }
             `}
           >
-            {allSelected
-              ? "All Rabbits"
-              : `${selectedItems.length} Selected`}
+            {allSelected ? "All Rabbits" : `${selectedItems.length} Selected`}
           </span>
-
         </div>
 
         {/* ARROW */}
@@ -158,7 +131,6 @@ const RabbitFilter = () => {
             className="text-[#7A8497]"
           />
         </div>
-
       </button>
 
       {/* DROPDOWN */}
@@ -185,12 +157,9 @@ const RabbitFilter = () => {
           }
         `}
       >
-        
         <div className="p-4">
-          
           {/* ALL RABBITS */}
           <div className="flex items-center gap-2">
-            
             <Checkbox
               checked={allSelected}
               onChange={handleAll}
@@ -207,29 +176,18 @@ const RabbitFilter = () => {
             <span className="text-[14px] font-medium text-[#1F2937]">
               Rabbit USA
             </span>
-
           </div>
 
           {/* ITEMS */}
           {rabbitGroups.map((group, index) => (
             <div key={group.group}>
-              
               {/* GROUP ITEMS */}
               <div className="mt-1">
-                
                 {group.items.map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-2"
-                  >
-                    
+                  <div key={item} className="flex items-center gap-2">
                     <Checkbox
-                      checked={selectedItems.includes(
-                        item
-                      )}
-                      onChange={() =>
-                        handleCheck(item)
-                      }
+                      checked={selectedItems.includes(item)}
+                      onChange={() => handleCheck(item)}
                       size="small"
                       sx={{
                         color: "#28596A",
@@ -240,25 +198,19 @@ const RabbitFilter = () => {
                       }}
                     />
 
-                    <span className="text-[14px] text-[#374151]">
-                      {item}
-                    </span>
-
+                    <span className="text-[14px] text-[#374151]">{item}</span>
                   </div>
                 ))}
               </div>
 
               {/* DIVIDER */}
-              {index !==
-                rabbitGroups.length - 1 && (
+              {index !== rabbitGroups.length - 1 && (
                 <div className="my-3 border-t border-[#D1D5DB]" />
               )}
             </div>
           ))}
         </div>
-
       </div>
-
     </div>
   );
 };

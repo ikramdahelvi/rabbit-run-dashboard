@@ -1,37 +1,34 @@
-import {
-  Menu,
-  X,
-  Phone,
-  Bell,
-  Wrench,
-  CircleUserRound,
-} from "lucide-react";
+import { Menu, X, Phone, Bell, Wrench, CircleUserRound } from "lucide-react";
 
 import { useState } from "react";
 
-const Navbar = ({
-  mobile = false,
-  iconsOnly = false,
-}) => {
+const Navbar = ({ mobile = false, iconsOnly = false }) => {
   const [open, setOpen] = useState(false);
 
   /* DESKTOP ICONS */
   if (iconsOnly) {
     return (
       <div className="flex items-center gap-5 text-[#BEBEBE]">
-        
-        <button className="hover:text-lime-300 transition cursor-pointer" aria-label="Settings">
+        <button
+          className="hover:text-lime-300 transition cursor-pointer"
+          aria-label="Settings"
+        >
           <Wrench size={26} strokeWidth={1.8} />
         </button>
 
-        <button className="hover:text-lime-300 transition cursor-pointer" aria-label="Notifications">
+        <button
+          className="hover:text-lime-300 transition cursor-pointer"
+          aria-label="Notifications"
+        >
           <Bell size={26} strokeWidth={1.8} />
         </button>
 
-        <button className="hover:text-lime-300 transition cursor-pointer" aria-label="Profile">
+        <button
+          className="hover:text-lime-300 transition cursor-pointer"
+          aria-label="Profile"
+        >
           <CircleUserRound size={26} strokeWidth={1.8} />
         </button>
-
       </div>
     );
   }
@@ -41,31 +38,22 @@ const Navbar = ({
     return (
       <>
         {/* LEFT */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="text-white"
-        >
-          {open ? (
-            <X size={22} />
-          ) : (
-            <Menu size={22} />
-          )}
+        <button onClick={() => setOpen(!open)} className="text-white">
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
 
         {/* RIGHT */}
         <div className="flex items-center gap-5 text-white">
-          
           <Phone size={16} strokeWidth={1.8} />
 
           <Bell size={16} strokeWidth={1.8} />
 
           <CircleUserRound size={18} strokeWidth={1.8} />
-
         </div>
 
         {/* MOBILE DROPDOWN */}
         <div
-  className={`
+          className={`
     absolute
     top-[132px]
     left-0
@@ -78,48 +66,42 @@ const Navbar = ({
     duration-300
     ease-in-out
     z-50
-    ${
-      open
-        ? "max-h-60 opacity-100 py-5"
-        : "max-h-0 opacity-0 py-0"
-    }
+    ${open ? "max-h-60 opacity-100 py-5" : "max-h-0 opacity-0 py-0"}
   `}
->
-  
-  <div className="px-6 flex flex-col gap-5">
-    
-    <a
-      href="#"
-      className="text-[11px] uppercase tracking-[2px] text-white/80 hover:text-lime-400 transition"
-    >
-      Dashboard
-    </a>
+        >
+          <div className="px-6 flex flex-col gap-5">
+            <a
+              href="#"
+              className="text-[11px] uppercase tracking-[2px] text-white/80 hover:text-lime-400 transition"
+            >
+              Dashboard
+            </a>
 
-    <a
-      href="#"
-      className="text-[11px] uppercase tracking-[2px] text-white/80 hover:text-lime-400 transition"
-    >
-      Summary
-    </a>
+            <a
+              href="#"
+              className="text-[11px] uppercase tracking-[2px] text-white/80 hover:text-lime-400 transition"
+            >
+              Summary
+            </a>
 
-    <a
-      href="#"
-      className="text-[11px] uppercase tracking-[2px] text-white/80 hover:text-lime-400 transition"
-    >
-      Support
-    </a>
-
-  </div>
-
-</div>
+            <a
+              href="#"
+              className="text-[11px] uppercase tracking-[2px] text-white/80 hover:text-lime-400 transition"
+            >
+              Support
+            </a>
+          </div>
+        </div>
       </>
     );
   }
 
   /* DESKTOP MENU */
   return (
-    <nav className="flex items-center gap-10 lg:gap-14" aria-label="Main navigation">
-      
+    <nav
+      className="flex items-center gap-10 lg:gap-14"
+      aria-label="Main navigation"
+    >
       <a
         href="#"
         className="text-[18px] uppercase tracking-[2px] text-[#EBEBEB] hover:text-lime-400 transition"
@@ -140,7 +122,6 @@ const Navbar = ({
       >
         Support
       </a>
-
     </nav>
   );
 };

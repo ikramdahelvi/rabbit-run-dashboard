@@ -1,48 +1,29 @@
 import { useState } from "react";
 
-import {
-  Maximize2,
-  MoreVertical,
-} from "lucide-react";
+import { Maximize2, MoreVertical } from "lucide-react";
 
-const CardHeader = ({
-  title = "Rabbit Card One",
-}) => {
-  const [open, setOpen] =
-    useState(false);
+const CardHeader = ({ title = "Rabbit Card One" }) => {
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="relative mb-4 flex items-center justify-between">
-      
       {/* TITLE */}
-      <h3 className="text-[18px] font-medium text-[#28586C] pl-4">
-        {title}
-      </h3>
+      <h3 className="text-[18px] font-medium text-[#28586C] pl-4">{title}</h3>
 
       {/* ACTIONS */}
       <div className="flex items-center gap-3">
-        
         {/* EXPAND */}
         <button className="text-[#486C94] hover:text-[#0F172A] transition cursor-pointer">
-          <Maximize2
-            size={24}
-            strokeWidth={2}
-          />
+          <Maximize2 size={24} strokeWidth={2} />
         </button>
 
         {/* MENU */}
         <div className="relative">
-          
           <button
-            onClick={() =>
-              setOpen(!open)
-            }
+            onClick={() => setOpen(!open)}
             className="text-[#486C94] hover:text-[#0F172A] transition cursor-pointer align-top"
           >
-            <MoreVertical
-              size={26}
-              strokeWidth={2}
-            />
+            <MoreVertical size={26} strokeWidth={2} />
           </button>
 
           {/* DROPDOWN */}
@@ -69,7 +50,6 @@ const CardHeader = ({
               }
             `}
           >
-            
             {/* OPTION */}
             <button
               className="
@@ -117,13 +97,9 @@ const CardHeader = ({
             >
               Remove Card
             </button>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
   );
 };

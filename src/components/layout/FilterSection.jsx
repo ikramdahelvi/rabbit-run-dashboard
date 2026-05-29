@@ -9,9 +9,9 @@ const FilterSection = () => {
 
   return (
     <div className="border-[#85AC31] border-t-4">
-      <div className="px-3 sm:px-6 lg:px-8 py-3 flex flex-col lg:flex-row md:flex-row lg:items-center lg:justify-between md:justify-between gap-3 lg:h-[68px]">
+      <div className="px-3 sm:px-6 lg:px-8 py-3 flex flex-col lg:flex-row md:flex-row lg:items-center lg:justify-between md:justify-between gap-3">
         {/* LEFT FILTERS */}
-        <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center justify-between gap-5">
           {/* DATE PICKER */}
           <CalendarCard />
 
@@ -20,12 +20,8 @@ const FilterSection = () => {
         </div>
 
         {/* RIGHT ACTIONS */}
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center justify-between lg:gap-8 gap-3">
           <Button />
-
-          {/* <button className="text-gray-300 hover:text-white transition" aria-label="More options">
-            <MoreVertical size={24} />
-          </button> */}
 
           <div className="relative">
             {/* MENU BUTTON */}
@@ -38,6 +34,7 @@ const FilterSection = () => {
       transition
       p-1
     "
+              aria-label="More options"
             >
               <MoreVertical size={24} />
             </button>

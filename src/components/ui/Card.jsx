@@ -1,8 +1,4 @@
-const Card = ({
-  children,
-  className = "",
-  padding = "p-6",
-}) => {
+const Card = ({ children, className = "", padding = "p-6" }) => {
   return (
     <div
       className={`

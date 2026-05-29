@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-import {
-  ChevronDown,
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const actions = [
   "Export Report",
@@ -14,8 +12,7 @@ const actions = [
 const ActionDropdown = () => {
   const [open, setOpen] = useState(false);
 
-  const [selectedAction, setSelectedAction] =
-    useState("Actions");
+  const [selectedAction, setSelectedAction] = useState("Actions");
 
   const handleSelect = (action) => {
     setSelectedAction(action);
@@ -24,7 +21,6 @@ const ActionDropdown = () => {
 
   return (
     <div className="relative flex-1 md:flex-none lg:flex-none">
-      
       {/* BUTTON */}
       <button
         onClick={() => setOpen(!open)}
@@ -48,7 +44,6 @@ const ActionDropdown = () => {
           hover:brightness-110
         "
       >
-        
         {/* LABEL */}
         <span className="text-white text-[13px] font-medium">
           {selectedAction}
@@ -63,13 +58,8 @@ const ActionDropdown = () => {
             ${open ? "rotate-180" : ""}
           `}
         >
-          <ChevronDown
-            size={18}
-            strokeWidth={2}
-            className="text-white"
-          />
+          <ChevronDown size={18} strokeWidth={2} className="text-white" />
         </div>
-
       </button>
 
       {/* DROPDOWN */}
@@ -97,16 +87,12 @@ const ActionDropdown = () => {
           }
         `}
       >
-        
         {/* ITEMS */}
         <div className="py-2">
-          
           {actions.map((action) => (
             <button
               key={action}
-              onClick={() =>
-                handleSelect(action)
-              }
+              onClick={() => handleSelect(action)}
               className="
                 w-full
                 px-4
@@ -121,11 +107,8 @@ const ActionDropdown = () => {
               {action}
             </button>
           ))}
-
         </div>
-
       </div>
-
     </div>
   );
 };
