@@ -18,7 +18,7 @@ const DonutChart = () => {
   return (
     <div className="lg:flex items-center justify-around gap-6">
       {/* CHART */}
-      <div className="w-[260px] h-[200px]">
+      <div className="w-full lg:w-[260px] h-[200px]">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie

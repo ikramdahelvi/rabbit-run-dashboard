@@ -23,7 +23,7 @@ const CardHeader = ({
       <div className="flex items-center gap-3">
         
         {/* EXPAND */}
-        <button className="text-[#486C94] hover:text-[#0F172A] transition">
+        <button className="text-[#486C94] hover:text-[#0F172A] transition cursor-pointer">
           <Maximize2
             size={24}
             strokeWidth={2}
@@ -37,7 +37,7 @@ const CardHeader = ({
             onClick={() =>
               setOpen(!open)
             }
-            className="text-[#486C94] hover:text-[#0F172A] transition"
+            className="text-[#486C94] hover:text-[#0F172A] transition cursor-pointer align-top"
           >
             <MoreVertical
               size={26}

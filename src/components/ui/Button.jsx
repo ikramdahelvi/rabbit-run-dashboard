@@ -33,6 +33,7 @@ const ActionDropdown = () => {
           lg:min-w-[142px]
           min-w-full
           px-5
+          cursor-pointer
           rounded-full
           bg-gradient-to-r
           from-[#2563EB]

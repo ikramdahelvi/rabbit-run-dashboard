@@ -20,15 +20,15 @@ const Navbar = ({
     return (
       <div className="flex items-center gap-5 text-[#BEBEBE]">
         
-        <button className="hover:text-lime-300 transition" aria-label="Settings">
+        <button className="hover:text-lime-300 transition cursor-pointer" aria-label="Settings">
           <Wrench size={26} strokeWidth={1.8} />
         </button>
 
-        <button className="hover:text-lime-300 transition" aria-label="Notifications">
+        <button className="hover:text-lime-300 transition cursor-pointer" aria-label="Notifications">
           <Bell size={26} strokeWidth={1.8} />
         </button>
 
-        <button className="hover:text-lime-300 transition" aria-label="Profile">
+        <button className="hover:text-lime-300 transition cursor-pointer" aria-label="Profile">
           <CircleUserRound size={26} strokeWidth={1.8} />
         </button>
 

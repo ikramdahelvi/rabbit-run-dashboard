@@ -3,8 +3,8 @@ import { useState } from "react";
 import Checkbox from "@mui/material/Checkbox";
 
 import {
-  ChevronDown,
-  ChevronUp,
+  CircleChevronDown,
+  CircleChevronUp ,
 } from "lucide-react";
 
 const rabbitGroups = [
@@ -96,6 +96,7 @@ const RabbitFilter = () => {
           transition-all
           duration-200
           hover:border-[#5B6B86]
+          cursor-pointer
         "
       >
         
@@ -151,7 +152,7 @@ const RabbitFilter = () => {
             ${open ? "rotate-180" : ""}
           `}
         >
-          <ChevronDown
+          <CircleChevronDown
             size={22}
             strokeWidth={1.8}
             className="text-[#7A8497]"

@@ -32,6 +32,7 @@ const CalendarCard = () => {
         transition-all
         duration-200
         hover:border-[#5B6B86]
+        cursor-pointer
       "
       >
         {/* LEFT CONTENT */}
