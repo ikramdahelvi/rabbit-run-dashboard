@@ -21,7 +21,8 @@ const CalendarCard = () => {
         className="
         h-[50px]
         w-full
-        px-6
+        lg:px-6
+        px-4
         rounded-full
         border
         border-[#44526A]

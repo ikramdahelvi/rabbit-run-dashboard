@@ -50,10 +50,10 @@ const tableData = [
 const DataTable = () => {
   return (
     <div className="overflow-x-auto border-t border-[#E5E7EB]">
-      <table className="min-w-[600px] w-full border-collapse whitespace-nowrap lg:whitespace-normal">
+      <table className="min-w-[600px] lg:min-w-[500px] w-full border-collapse whitespace-nowrap lg:whitespace-normal">
         {/* HEADER */}
         <thead>
-          <tr className="h-[48px] border-b border-[#D1D5DB] bg-[#F7F7F8] text-[#4B5563]">
+          <tr className="h-[48px] border-b border-[#D1D5DB] bg-[#F7F7F8] text-[#4B5563] text-[15px]">
             <th className="text-left font-medium pl-4 whitespace-nowrap">
               Rabbit Header One
             </th>
@@ -71,7 +71,7 @@ const DataTable = () => {
         </thead>
 
         {/* BODY */}
-        <tbody className="text-[#3F3F46]">
+        <tbody className="text-[#3F3F46] text-[15px]">
           {tableData.map((item, index) => (
             <tr
               key={index}
